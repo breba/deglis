@@ -30,7 +30,34 @@
 	</nav>
 
 	
-	PÁGINA INICIAL
+	<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>CNPJ</th>
+					<th>Razão Social</th>
+					<th>Nome Fantasia</th>
+					<th>Rua</th>
+					<th>Bairro</th>
+					<th>Número</th>
+					<th>Cidade</th>
+					<th>Estado</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach items='${fornecedores}' var='object'>
+					<tr>
+						<td>${object.cnpj}</td>
+						<td>${object.razaoSocial}</td>
+						<td>${object.nomeFantasia}</td>
+						<td>${object.endereco.rua}</td>
+						<td>${object.endereco.bairro}</td>
+						<td>${object.endereco.numero}</td>
+						<td>${object.endereco.cidade}</td>
+						<td>${object.endereco.estado}</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
 	
 	
 </body>

@@ -13,22 +13,22 @@
 <body style="background-color: #C0C0C0;">
 	<div>
 		<nav class="navbar navbar-inverse">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="#">Start Software</a>
-				</div>
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="<c:url value='/'/>">Página Principal</a></li>
-					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown" href="#">Cadastrar <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="<c:url value='/mercadoria/form'/>">Mercadoria</a></li>
-							<li><a href="<c:url value='/fornecedor/form'/>">Fornecedor</a></li>
-						</ul></li>
-					<li><a href="#">Listar Mercadorias</a></li>
-				</ul>
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Start Software</a>
 			</div>
-		</nav>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="<c:url value='/'/>">Página Principal</a></li>
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">Cadastrar <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="<c:url value='/mercadoria/form'/>">Mercadoria</a></li>
+						<li><a href="<c:url value='/fornecedor/form'/>">Fornecedor</a></li>
+					</ul></li>
+				<li><a href="<c:url value='/fornecedor/list'/>">Listar Mercadorias</a></li>
+			</ul>
+		</div>
+	</nav>
 	</div>
 	
 	

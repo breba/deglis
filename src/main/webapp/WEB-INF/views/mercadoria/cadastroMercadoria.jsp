@@ -13,23 +13,22 @@
 <body style="background-color: #C0C0C0;">
 	<div>
 		<nav class="navbar navbar-inverse">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="#">Start Software</a>
-				</div>
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="<c:url value='/'/>">Página
-							Principal</a></li>
-					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown" href="#">Cadastrar <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="<c:url value='/mercadoria/form'/>">Mercadoria</a></li>
-							<li><a href="<c:url value='/fornecedor/form'/>">Fornecedor</a></li>
-						</ul></li>
-					<li><a href="#">Listar Mercadorias</a></li>
-				</ul>
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Start Software</a>
 			</div>
-		</nav>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="<c:url value='/'/>">Página Principal</a></li>
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">Cadastrar <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="<c:url value='/mercadoria/form'/>">Mercadoria</a></li>
+						<li><a href="<c:url value='/fornecedor/form'/>">Fornecedor</a></li>
+					</ul></li>
+				<li><a href="<c:url value='/fornecedor/list'/>">Listar Mercadorias</a></li>
+			</ul>
+		</div>
+	</nav>
 	</div>
 
 
@@ -50,25 +49,17 @@
 				<form:input type="text" class="form-control input-sm" path="preco" placeholder="Digite o preço da mercadoria" />
 			</div>
 			
-			<div class="form-group">
 			
-				<div class="dropdown"><button style="background-color: #808080;" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> Lista de Fornecedores <span class="caret"></span>
-					</button>
-					<ul class="dropdown-menu">
-						<c:forEach items='${fornecedores}' var='object'>
-							<li><a href="#">${object.nomeFantasia}</a></li>
-						</c:forEach>
-					</ul>
-				</div>
+			<div class="form-group">
+				<form:select path="fornecedor" cssClass="form-control"
+					items="${fornecedores}" itemValue="cnpj" itemLabel="nomeFantasia"/>
 			</div>
 			
-			<br /> <br />
+			<br />
 
 			<button type="submit" class="btn btn-primary btn-block"
 				style="background-color: #008000;">Cadastrar</button>
 		</form:form>
 	</div>
-
-
 </body>
 

@@ -27,11 +27,10 @@ public class FornecedorController {
 		return new ModelAndView("redirect:/");
 	}
 	
-	@RequestMapping("/listar")
-	public ModelAndView listFornecedores(Fornecedor fornecedor){
-		ModelAndView md = new ModelAndView("mercadoria/cadastroMercadoria");
+	@RequestMapping("/list")
+	public ModelAndView list(Fornecedor fornecedor){
+		ModelAndView md = new ModelAndView("fornecedor/list");
 		md.addObject("fornecedores", fornecedorRepository.findAll());
 		return md;
-		
 	}
 }
